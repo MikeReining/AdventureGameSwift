@@ -139,8 +139,17 @@ func moveToRoom(inout player: Player, rooms: [Room]) {
         print("\(room) ")
     }
     println("- Which room would you like to pick?")
-
+    // Move Player to one of new rooms
+    let randomIndex = Int(arc4random_uniform(UInt32(possibleRooms.count)))
+    var newRoom = possibleRooms[randomIndex]
+    println("Player is moving to new room #: \(newRoom)")
+    
+    // Determine what happens in new room
+    
 }
+
+moveToRoom(&player, rooms)
+
 
 
 
